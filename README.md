@@ -13,24 +13,17 @@ docker-compose build --no-cache
 
 ```
 docker-compose run python3 wagtail start project
-docker-compose run python3 python project/manage.py migrate
 ``` 
-
-### Check runserver
-
-http://localhost:8000
-
-## Migration & Create superuser
 
 ### Migrate
 
 ```
-docker-compose run python3 python manage.py migrate
+docker-compose run python3 python project/manage.py migrate
 ```
 
 ### Create superuser
 
-```
+```bash
 docker-compose run python3 python manage.py createsuperuser
 ```
 
@@ -44,8 +37,11 @@ Password (again):
 Superuser created successfully.
 ```
 
-## Create App
+
+### Run server
 
 ```
-docker-compose run python3 python manage.py startapp cms
+docker-compose up
 ```
+
+Access [http://localhost:8000](http://localhost:8000)
