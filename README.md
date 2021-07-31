@@ -5,7 +5,6 @@
 ### Make dir & Build container
 
 ```bash
-mkdir src
 docker-compose build --no-cache
 ```
 
